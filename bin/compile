@@ -15,7 +15,7 @@ echo "-----> Building runtime environment for Ghostscript"
 tar xzvf ghostscript-$VERSION.tar.gz
 cd ghostscript-$VERSION
 ./configure --disable-cups --disable-gtk --with-drivers=FILES
-make
+make --silent
 cp bin/gs ~/bin
 
 echo "Ghostscript version:"
