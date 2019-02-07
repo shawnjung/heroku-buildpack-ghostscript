@@ -12,10 +12,10 @@ curl -L -O $PACKAGE -s
 
 echo "-----> Building runtime environment for Ghostscript"
 
-tar xzvf ghostscript-$VERSION.tar.gz
+tar xzf ghostscript-$VERSION.tar.gz
 cd ghostscript-$VERSION
-./configure --disable-cups --disable-gtk --with-drivers=FILES
-make --silent
+./configure --disable-cups --disable-gtk --with-drivers=FILES 1> /dev/null
+make 1> /dev/null
 cp bin/gs ~/bin
 
 echo "Ghostscript version:"
